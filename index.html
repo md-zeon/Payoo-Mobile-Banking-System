@@ -32,16 +32,18 @@
                 <div class="card-body">
                     <form class="fieldset">
                         <label class="fieldset-label text-black font-medium">Mobile Number</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Your Number" required />
+                        <input value="01234243245" id="mobile-number" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Your Number" required />
                         <label class="fieldset-label text-black font-medium">4 Digit PIN</label>
-                        <input type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
                         <div><a class="link link-hover">Forgot PIN?</a></div>
-                        <button class="btn btn-info p-4 rounded-full text-xl font-semibold text-white mt-4">Login</button>
+                        <button type="submit" id="login-btn" class="btn btn-info p-4 rounded-full text-xl font-semibold text-white mt-4">Login</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
+    <script src="utilities/utility.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 
 </html>
