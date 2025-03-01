@@ -79,8 +79,8 @@
                 <p id="view-all" class="text-sm text-black/50">View All</p>
             </div>
         </section>
-        <!-- Latest Payment -->
-        <section class="hidden space-y-4 mt-4">
+        <!-- Latest Payment Section -->
+        <section class="hidden space-y-4 mt-4 pb-10">
             <!-- Payment -->
             <div class="flex justify-between items-center mx-4 bg-white rounded-xl">
                 <div class="flex py-3 px-2 items-center gap-2">
@@ -135,8 +135,8 @@
             </div>
         </section>
 
-        <!-- Add Money -->
-        <section class="mt-4 pb-20">
+        <!-- Add Money Section -->
+        <section class="hidden mt-4 pb-20">
             <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
                 <div class="card-body">
                     <form class="fieldset">
@@ -157,6 +157,24 @@
                         <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
                         <div><a class="link link-hover">Forgot PIN?</a></div>
                         <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Add Money</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cash Out Section -->
+        <section class="mt-4 pb-20">
+            <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
+                <div class="card-body">
+                    <form class="fieldset">
+                        <label class="fieldset-label text-black font-medium">Agent Number</label>
+                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
+                        <label class="fieldset-label text-black font-medium">Amount</label>
+                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Withdraw" required />
+                        <label class="fieldset-label text-black font-medium">PIN Number</label>
+                        <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <div><a class="link link-hover">Forgot PIN?</a></div>
+                        <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Withdraw Money</button>
                     </form>
                 </div>
             </div>
