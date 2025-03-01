@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/8ca39e687b.js" crossorigin="anonymous"></script>
     <!-- Custom Styles -->
     <style type="text/tailwindcss">
         @theme {
@@ -20,9 +22,22 @@
         }
     </style>
 </head>
-
-<body>
-    
+<body class="font-outfit bg-[#1e1e1e]">
+    <main class="max-w-md mx-auto min-h-screen bg-[#F4F5F7]">
+        <nav class="flex items-center justify-between py-3 px-6 border-b border-b-black/20">
+            <div class="flex gap-2 items-center">
+                <img class="w-12" src="./assets/Group.png" alt="logo">
+                <div class="space-y-1">
+                    <h4 class="font-extrabold text-black/90 text-lg">$<span>45000</span></h4>
+                    <p class="text-sm text-black/50">Available Balance</p>
+                </div>
+            </div>
+            <button class="btn btn-outline text-black/50"><i class="-rotate-180 fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+        </nav>
+        <section>
+            <h1>🔥 Welcome to Payooo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        </section>
+    </main>
 </body>
-
 </html>
