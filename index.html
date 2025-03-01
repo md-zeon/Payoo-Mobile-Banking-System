@@ -19,7 +19,28 @@
         }
     </style>
 </head>
-<body>
-    
+
+<body class="font-outfit bg-[#1e1e1e]">
+    <main class="max-w-md mx-auto min-h-screen bg-[#F4F5F7]">
+        <div class="relative">
+            <img class="absolute top-20 w-10/12 left-[50%] translate-x-[-50%]" src="./assets/bg.png" alt="">
+            <img class="absolute top-28 left-[50%] translate-x-[-50%]" src="./assets/Group.png" alt="">
+        </div>
+        <section class="pt-60 pb-40" id="login">
+            <div class="card mx-auto max-w-sm bg-white shadow-2xl">
+                <div class="card-body">
+                    <form class="fieldset">
+                        <label class="fieldset-label text-black font-medium">Mobile Number</label>
+                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Your Number" required />
+                        <label class="fieldset-label text-black font-medium">4 Digit PIN</label>
+                        <input type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <div><a class="link link-hover">Forgot PIN?</a></div>
+                        <button class="btn btn-info p-4 rounded-full text-xl font-semibold text-white mt-4">Login</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
