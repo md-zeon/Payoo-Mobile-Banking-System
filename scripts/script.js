@@ -10,13 +10,21 @@ addMoneyBox.addEventListener("click", function() {
     addClassById("view-all", "hidden");
 
     removeClassById("add-money-container", "hidden");
-
+    
     addClassById("latest-payment-container", "hidden");
     addClassById("cash-out-container", "hidden");
     addClassById("transfer-money-container", "hidden");
     addClassById("get-bonus-container", "hidden");
     addClassById("pay-bill-container", "hidden");
     addClassById("transaction-container", "hidden");
+    
+    addClassById("add-money-box", "selected-box");
+
+    removeClassById("cash-out-box", "selected-box");
+    removeClassById("transfer-money-box", "selected-box");
+    removeClassById("get-bonus-box", "selected-box");
+    removeClassById("pay-bill-box", "selected-box");
+    removeClassById("transaction-box", "hidden");
 });
 
 cashOutBox.addEventListener("click", function() {
@@ -31,10 +39,18 @@ cashOutBox.addEventListener("click", function() {
     addClassById("get-bonus-container", "hidden");
     addClassById("pay-bill-container", "hidden");
     addClassById("transaction-container", "hidden");
+
+    addClassById("cash-out-box", "selected-box");
+    
+    removeClassById("add-money-box", "selected-box");
+    removeClassById("transfer-money-box", "selected-box");
+    removeClassById("get-bonus-box", "selected-box");
+    removeClassById("pay-bill-box", "selected-box");
+    removeClassById("transaction-box", "hidden");
 });
 
 transferMoneyBox.addEventListener("click", function() {
-    changeInnerTextById("payment-title", "Cash Out");
+    changeInnerTextById("payment-title", "Transfer Money");
     addClassById("view-all", "hidden");
 
     removeClassById("transfer-money-container", "hidden");
@@ -45,10 +61,18 @@ transferMoneyBox.addEventListener("click", function() {
     addClassById("get-bonus-container", "hidden");
     addClassById("pay-bill-container", "hidden");
     addClassById("transaction-container", "hidden");
+
+    addClassById("transfer-money-box", "selected-box");
+    
+    removeClassById("add-money-box", "selected-box");
+    removeClassById("cash-out-box", "selected-box");
+    removeClassById("get-bonus-box", "selected-box");
+    removeClassById("pay-bill-box", "selected-box");
+    removeClassById("transaction-box", "hidden");
 });
 
 getBonusBox.addEventListener("click", function() {
-    changeInnerTextById("payment-title", "Cash Out");
+    changeInnerTextById("payment-title", "Get Bonus");
     addClassById("view-all", "hidden");
 
     removeClassById("get-bonus-container", "hidden");
@@ -59,10 +83,18 @@ getBonusBox.addEventListener("click", function() {
     addClassById("transfer-money-container", "hidden");
     addClassById("pay-bill-container", "hidden");
     addClassById("transaction-container", "hidden");
+
+    addClassById("get-bonus-box", "selected-box");
+    
+    removeClassById("add-money-box", "selected-box");
+    removeClassById("cash-out-box", "selected-box");
+    removeClassById("transfer-money-box", "selected-box");
+    removeClassById("pay-bill-box", "selected-box");
+    removeClassById("transaction-box", "hidden");
 });
 
 payBillBox.addEventListener("click", function() {
-    changeInnerTextById("payment-title", "Cash Out");
+    changeInnerTextById("payment-title", "Pay Bill");
     addClassById("view-all", "hidden");
 
     removeClassById("pay-bill-container", "hidden");
@@ -73,10 +105,18 @@ payBillBox.addEventListener("click", function() {
     addClassById("get-bonus-container", "hidden");
     addClassById("transfer-money-container", "hidden");
     addClassById("transaction-container", "hidden");
+
+    addClassById("pay-bill-box", "selected-box");
+    
+    removeClassById("add-money-box", "selected-box");
+    removeClassById("cash-out-box", "selected-box");
+    removeClassById("transfer-money-box", "selected-box");
+    removeClassById("get-bonus-box", "selected-box");
+    removeClassById("transaction-box", "hidden");
 });
 
 transactionBox.addEventListener("click", function() {
-    changeInnerTextById("payment-title", "Cash Out");
+    changeInnerTextById("payment-title", "transaction History");
     addClassById("view-all", "hidden");
 
     removeClassById("transaction-container", "hidden");
@@ -87,6 +127,14 @@ transactionBox.addEventListener("click", function() {
     addClassById("get-bonus-container", "hidden");
     addClassById("pay-bill-container", "hidden");
     addClassById("transfer-money-container", "hidden");
+
+    addClassById("transaction-box", "selected-box");
+    
+    removeClassById("add-money-box", "selected-box");
+    removeClassById("cash-out-box", "selected-box");
+    removeClassById("transfer-money-box", "selected-box");
+    removeClassById("get-bonus-box", "selected-box");
+    removeClassById("pay-bill-box", "selected-box");
 });
 
 
