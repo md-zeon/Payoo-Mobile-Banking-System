@@ -28,11 +28,11 @@
             <div class="flex gap-2 items-center">
                 <img class="w-12" src="./assets/Group.png" alt="logo">
                 <div class="space-y-1">
-                    <h4 class="font-extrabold text-black/90 text-lg">$<span>45000</span></h4>
+                    <h4 class="font-extrabold text-black/90 text-lg">$<span id="main-balance">45000</span></h4>
                     <p class="text-sm text-black/50">Available Balance</p>
                 </div>
             </div>
-            <button class="btn btn-outline text-black/50"><i class="-rotate-180 fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+            <button id="logout-btn" class="btn btn-outline text-black/50"><i class="-rotate-180 fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
         </nav>
         <section class="space-y-6 rounded-b-3xl pb-6 mb-8 bg-white">
             <div class="py-8 space-y-3 px-4">
@@ -42,45 +42,45 @@
             <!-- Payment Boxes -->
             <div class="grid grid-cols-3 px-4 gap-4">
                 <!-- Add Money -->
-                <div class="py-4 px-3 border border-black/20 rounded-lg text-center space-y-2">
+                <div id="add-money-box" class="py-4 px-3 border group border-black/20 hover:border-[#0874F2] cursor-pointer rounded-lg text-center space-y-2">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="Add Money">
-                    <h3 class="text-black/50 text-sm">Add Money</h3>
+                    <h3 class="text-black/50 text-sm group-hover:text-[#0874F2]">Add Money</h3>
                 </div>
                 <!-- Cash Out Money -->
-                <div class="py-4 px-3 border border-black/20 rounded-lg text-center space-y-2">
+                <div id="cash-out-box" class="py-4 px-3 border group border-black/20 hover:border-[#0874F2] cursor-pointer rounded-lg text-center space-y-2">
                     <img class="mx-auto" src="./assets/send1.png" alt="Cash Out">
-                    <h3 class="text-black/50 text-sm">Cash Out</h3>
+                    <h3 class="text-black/50 text-sm group-hover:text-[#0874F2]">Cash Out</h3>
                 </div>
                 <!-- Transfer Money -->
-                <div class="py-4 px-3 border border-black/20 rounded-lg text-center space-y-2">
+                <div id="transfer-money-box" class="py-4 px-3 border group border-black/20 hover:border-[#0874F2] cursor-pointer rounded-lg text-center space-y-2">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="Transfer Money">
-                    <h3 class="text-black/50 text-sm">Transfer Money</h3>
+                    <h3 class="text-black/50 text-sm group-hover:text-[#0874F2]">Transfer Money</h3>
                 </div>
                 <!-- Get Bonus -->
-                <div class="py-4 px-3 border border-black/20 rounded-lg text-center space-y-2">
+                <div id="get-bonus-box" class="py-4 px-3 border group border-black/20 hover:border-[#0874F2] cursor-pointer rounded-lg text-center space-y-2">
                     <img class="mx-auto" src="./assets/bonus1.png" alt="Get Bonus">
-                    <h3 class="text-black/50 text-sm">Get Bonus</h3>
+                    <h3 class="text-black/50 text-sm group-hover:text-[#0874F2]">Get Bonus</h3>
                 </div>
                 <!-- Pay Bill -->
-                <div class="py-4 px-3 border border-black/20 rounded-lg text-center space-y-2">
+                <div id="pay-bill-box" class="py-4 px-3 border group border-black/20 hover:border-[#0874F2] cursor-pointer rounded-lg text-center space-y-2">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="Pay Bill">
-                    <h3 class="text-black/50 text-sm">Pay Bill</h3>
+                    <h3 class="text-black/50 text-sm group-hover:text-[#0874F2]">Pay Bill</h3>
                 </div>
                 <!-- Transactions -->
-                <div class="py-4 px-3 border border-black/20 rounded-lg text-center space-y-2">
+                <div id="transaction-box" class="py-4 px-3 border group border-black/20 hover:border-[#0874F2] cursor-pointer rounded-lg text-center space-y-2">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="Transactions">
-                    <h3 class="text-black/50 text-sm">Transactions</h3>
+                    <h3 class="text-black/50 text-sm group-hover:text-[#0874F2]">Transactions</h3>
                 </div>
             </div>
         </section>
         <section>
             <div class="flex justify-between items-center px-6">
                 <h2 id="payment-title" class="text-black/90 font-semibold text-lg">Latest Payment</h2>
-                <p id="view-all" class="text-sm text-black/50">View All</p>
+                <p id="view-all" class="text-sm text-black/50 cursor-pointer">View All</p>
             </div>
         </section>
         <!-- Latest Payment Section -->
-        <section class="space-y-4 mt-4 pb-10">
+        <section id="latest-payment-container" class="space-y-4 mt-4 pb-10">
             <!-- Payment -->
             <div class="flex justify-between items-center mx-4 bg-white rounded-xl">
                 <div class="flex py-3 px-2 items-center gap-2">
@@ -101,7 +101,7 @@
                         <img class="w-6" src="assets/wallet1.png" alt="wallet">
                     </div>
                     <div class="space-y-1">
-                        <h2 class="text-black/70 font-semibold">Electricity Bill</h2>
+                        <h2 class="text-black/70 font-semibold">Gas Bill</h2>
                         <p class="text-xs text-black/60">Today 01:44 AM</p>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <img class="w-6" src="assets/wallet1.png" alt="wallet">
                     </div>
                     <div class="space-y-1">
-                        <h2 class="text-black/70 font-semibold">Electricity Bill</h2>
+                        <h2 class="text-black/70 font-semibold">WIFI Bill</h2>
                         <p class="text-xs text-black/60">Today 01:44 AM</p>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                         <img class="w-6" src="assets/wallet1.png" alt="wallet">
                     </div>
                     <div class="space-y-1">
-                        <h2 class="text-black/70 font-semibold">Electricity Bill</h2>
+                        <h2 class="text-black/70 font-semibold">Education Fee</h2>
                         <p class="text-xs text-black/60">Today 01:44 AM</p>
                     </div>
                 </div>
@@ -136,12 +136,12 @@
         </section>
 
         <!-- Add Money Section -->
-        <section class="hidden mt-4 pb-20">
+        <section id="add-money-container" class="hidden mt-4 pb-20">
             <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
                 <div class="card-body">
                     <form class="fieldset">
                         <label class="fieldset-label text-black font-medium">Select A Bank</label>
-                        <select class="select bg-[#F4F5F7] rounded-full">
+                        <select id="add-money-bank" class="select bg-[#F4F5F7] rounded-full">
                             <option disabled selected>Select Bank</option>
                             <option>Dutch Bangla Bank Limited</option>
                             <option>Islami Bank Limited</option>
@@ -150,74 +150,74 @@
                             <option>Rocket</option>
                         </select>
                         <label class="fieldset-label text-black font-medium">Bank Account Number</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Account Number" required />
+                        <input value="01234243245" id="bank-account-number" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Account Number" required />
                         <label class="fieldset-label text-black font-medium">Add Amount to Add</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Add" required />
+                        <input id="add-money-input" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Add" required />
                         <label class="fieldset-label text-black font-medium">4 Digit PIN</label>
-                        <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <input id="add-money-pin" value="1234" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
                         <div><a class="link link-hover">Forgot PIN?</a></div>
-                        <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Add Money</button>
+                        <button id="add-money-btn" type="submit" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Add Money</button>
                     </form>
                 </div>
             </div>
         </section>
 
         <!-- Cash Out Section -->
-        <section class="hidden mt-4 pb-20">
+        <section id="cash-out-container" class="hidden mt-4 pb-20">
             <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
                 <div class="card-body">
                     <form class="fieldset">
                         <label class="fieldset-label text-black font-medium">Agent Number</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
+                        <input id="agent-number" value="01234243245" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
                         <label class="fieldset-label text-black font-medium">Amount</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Withdraw" required />
+                        <input id="cash-out-amount" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Withdraw" required />
                         <label class="fieldset-label text-black font-medium">PIN Number</label>
-                        <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <input id="cash-out-pin" value="1234" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
                         <div><a class="link link-hover">Forgot PIN?</a></div>
-                        <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Withdraw Money</button>
+                        <button id="cash-out-btn" type="submit" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Withdraw Money</button>
                     </form>
                 </div>
             </div>
         </section>
 
         <!-- Transfer Money Section -->
-        <section class="hidden mt-4 pb-20">
+        <section id="transfer-money-container" class="hidden mt-4 pb-20">
             <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
                 <div class="card-body">
                     <form class="fieldset">
                         <label class="fieldset-label text-black font-medium">User Account Number</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
+                        <input id="user-account" value="01234243245" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
                         <label class="fieldset-label text-black font-medium">Amount</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Transfer" required />
+                        <input id="transfer-amount" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Add Amount to Transfer" required />
                         <label class="fieldset-label text-black font-medium">PIN Number</label>
-                        <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <input id="transfer-pin" value="1234" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
                         <div><a class="link link-hover">Forgot PIN?</a></div>
-                        <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Send Now</button>
+                        <button id="send-money-btn" type="submit" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Send Now</button>
                     </form>
                 </div>
             </div>
         </section>
 
         <!-- Get Bonus Section -->
-        <section class="hidden mt-4 pb-20">
+        <section id="get-bonus-container" class="hidden mt-4 pb-20">
             <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
                 <div class="card-body">
                     <form class="fieldset">
                         <label class="fieldset-label text-black font-medium">Enter Bonus Coupon</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Your Coupon" required />
-                        <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Get Bonus</button>
+                        <input id="coupon-code" type="text" class="input rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Your Coupon" required />
+                        <button id="get-bonus-btn" type="submit" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Get Bonus</button>
                     </form>
                 </div>
             </div>
         </section>
 
         <!-- Pay Bill Section -->
-        <section class="hidden mt-4 pb-20">
+        <section id="pay-bill-container" class="hidden mt-4 pb-20">
             <div class="card rounded-3xl mx-auto max-w-sm bg-white shadow-2xl">
                 <div class="card-body">
                     <form class="fieldset">
                         <label class="fieldset-label text-black font-medium">Select To Pay</label>
-                        <select class="select bg-[#F4F5F7] rounded-full">
+                        <select id="pay-bill-option" class="select bg-[#F4F5F7] rounded-full">
                             <option disabled selected>Select Option</option>
                             <option>Electricity Bill</option>
                             <option>Gas Bill</option>
@@ -226,34 +226,24 @@
                             <option>Education Fee</option>
                         </select>
                         <label class="fieldset-label text-black font-medium">Biller Account Number</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
+                        <input value="01234243245" id="bill-account-number" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 11 Digit Number" required />
                         <label class="fieldset-label text-black font-medium">Amount To Pay</label>
-                        <input type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Amount to Pay" required />
+                        <input id="pay-bill-amount" type="number" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter Amount to Pay" required />
                         <label class="fieldset-label text-black font-medium">PIN Number</label>
-                        <input value="1234" id="pin" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
+                        <input id="pay-bill-pin" value="1234" type="password" class="input appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-moz-number-spin-box]:appearance-none rounded-full p-4 bg-[#F4F5F7]" placeholder="Enter 4 Digit Pin" required />
                         <div><a class="link link-hover">Forgot PIN?</a></div>
-                        <button type="submit" id="login-btn" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Pay Now</button>
+                        <button id="pay-bill-btn" type="submit" class="btn bg-[#0874F2] p-4 rounded-full text-xl font-semibold text-white mt-4">Pay Now</button>
                     </form>
                 </div>
             </div>
         </section>
 
         <!-- Transaction History -->
-        <section class="hidden space-y-4 mt-4 pb-10">
-            <!-- Payment -->
-            <div class="flex justify-between items-center mx-4 bg-white rounded-xl">
-                <div class="flex py-3 px-2 items-center gap-2">
-                    <div class="grid place-items-center bg-[#F4F5F7] rounded-full w-11 h-11">
-                        <img class="w-6" src="assets/wallet1.png" alt="wallet">
-                    </div>
-                    <div class="space-y-1">
-                        <h2 class="text-black/70 font-semibold">Electricity Bill</h2>
-                        <p class="text-xs text-black/60">Today 01:44 AM</p>
-                    </div>
-                </div>
-                <i class="fa-solid fa-ellipsis-vertical pr-4 cursor-pointer"></i>
-            </div>
+        <section id="transaction-container" class="hidden space-y-4 mt-4 pb-10">
         </section>
     </main>
+    <script src="utilities/utility.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/logout.js"></script>
 </body>
 </html>
