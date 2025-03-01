@@ -18,3 +18,11 @@ function changeInnerTextById(id, text) {
     const element = document.getElementById(id);
     element.innerText = text; 
 }
+
+function validAmount(amount, mainBalance) {
+    if (amount > mainBalance) {
+        alert("Invalid amount");
+        return false;
+    }
+    return true;
+}

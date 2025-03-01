@@ -147,7 +147,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(even
     const bankAccountNumber = document.getElementById("bank-account-number").value;
     const addMoneyPIN = getInputValueById("add-money-pin");
     const transactionContainer = document.getElementById("transaction-container");
-
+    
     if (bankAccountNumber.length === 11) {
         if (addMoneyPIN === 1234) {
             const sum = Number(mainBalance.innerText) + addMoneyAmount;
@@ -186,6 +186,10 @@ document.getElementById("cash-out-btn").addEventListener("click", function(event
     const cashOutPIN = getInputValueById("cash-out-pin");
     const transactionContainer = document.getElementById("transaction-container");
 
+    if (!validAmount(cashOutAmount, Number(mainBalance.innerText))) {
+        return;
+    }
+
     if (agentNumber.length === 11) {
         if (cashOutPIN === 1234) {
             const sub = Number(mainBalance.innerText) - cashOutAmount;
@@ -223,6 +227,10 @@ document.getElementById("send-money-btn").addEventListener("click", function(eve
     const accountNumber = document.getElementById("user-account").value;
     const PIN = getInputValueById("transfer-pin");
     const transactionContainer = document.getElementById("transaction-container");
+
+    if (!validAmount(moneyAmount, Number(mainBalance.innerText))) {
+        return;
+    }
 
     if (accountNumber.length === 11) {
         if (PIN === 1234) {
@@ -274,6 +282,10 @@ document.getElementById("pay-bill-btn").addEventListener("click", function(event
     const PIN = getInputValueById("pay-bill-pin");
     const transactionContainer = document.getElementById("transaction-container");
 
+    if (!validAmount(moneyAmount, Number(mainBalance.innerText))) {
+        return;
+    }
+
     if (accountNumber.length === 11) {
         if (PIN === 1234) {
             const sub = Number(mainBalance.innerText) - moneyAmount;
@@ -304,4 +316,3 @@ document.getElementById("pay-bill-btn").addEventListener("click", function(event
 
     document.getElementById("pay-bill-amount").value = "";
 });
-
